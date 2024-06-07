@@ -12,18 +12,21 @@ public class LogicManager : MonoBehaviour
 
     public void Update()
     {
+    //ã‚‚ã—ã‚‚ESCã‚­ãƒ¼ã‚’æŠ¼ã—ãŸå ´åˆ
         if ( Input.GetKeyUp(KeyCode.Escape))
         {
+        //ã‚²ãƒ¼ãƒ ã‚’è½ã¨ã™
             Application.Quit();
-            Debug.Log("ƒQ[ƒ€‚ğI—¹‚µ‚Ü‚µ‚½");
+            Debug.Log("ã‚²ãƒ¼ãƒ ã‚’çµ‚äº†ã—ã¾ã—ãŸ");
         }
     }
 
 
-    //ƒƒjƒ…[‚É€–Ú‚ğ’Ç‰Á‚·‚é(‰º‹L‚ÌƒXƒNƒŠƒvƒg‚ªÀs‚³‚ê‚é‚Ì‚ÅƒeƒXƒg‚ÉÅ“Kj
+    //ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«é …ç›®ã‚’è¿½åŠ ã™ã‚‹(ä¸‹è¨˜ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆãŒå®Ÿè¡Œã•ã‚Œã‚‹ã®ã§ãƒ†ã‚¹ãƒˆã«æœ€é©ï¼‰
     [ContextMenu("Increase Score")]
     public void addScore(int scoreToAdd)
     {
+    //ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚¹ã‚³ã‚¢ã¯
         playerScore = playerScore + scoreToAdd;
         scoreText.text = playerScore.ToString();
     }
