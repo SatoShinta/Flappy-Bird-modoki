@@ -26,20 +26,24 @@ public class LogicManager : MonoBehaviour
     [ContextMenu("Increase Score")]
     public void addScore(int scoreToAdd)
     {
-    //プレイヤースコアは
+    //プレイヤースコアはscoreToAddで追加される
         playerScore = playerScore + scoreToAdd;
         scoreText.text = playerScore.ToString();
     }
 
     public void restartGame()
     {
+    //この関数が呼び出されたらアクティブなシーンを読み込む
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void gameOver()
     {
+    //ゲームオーバーのフラグをtureにする
         gameOverScreen.SetActive(true);
+        //playerに"Player"タグを持っているオブジェクトを取得する
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+        //先ほど取得したオブジェクトを破壊する
         Destroy(player);
         
     }
